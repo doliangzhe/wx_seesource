@@ -1,0 +1,18 @@
+<view class="container">
+  <!--userinfo-wrapper-->
+  <view class="userinfo-wrapper">
+    <image class="avatar" src="{{userInfo.avatarUrl}}" mode="scaleToFill" background-size="cover"></image>
+    <text class="nickname">{{userInfo.nickName}}</text>
+  </view>
+    <!--other-wrapper-->
+    <view class="other-wrapper">
+      <navigator class="item" hover-class="none" url="../about/about">
+        <text class="txt">关于我们</text>
+        <image class="arrow" mode="widthFix" src="../../resource/image/arrow_right_icon.png"></image>
+      </navigator>
+      <navigator class="item no-border" hover-class="none" url="../cooperation/cooperation">
+        <text class="txt">外包服务</text>
+        <image class="arrow" mode="widthFix" src="../../resource/image/arrow_right_icon.png"></image>
+      </navigator>
+    </view>
+</view>

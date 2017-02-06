@@ -1,0 +1,25 @@
+<view class="container">
+  <!--tabs-wrapper-->
+  <view class="tabs-wrapper">
+    <view class="tab {{item.selected ? 'active' : ''}}" wx:for="{{widgetDatas}}" wx:for-index="index" wx:for-item="item" bindtap="switchTab" data-index="{{index}}">{{item.name}}</view>
+  </view>
+  <!--content-wrapper-->
+  <view class="content-wrapper">
+    <scroll-view scroll-y="{{true}}" class="scroll-view {{item.selected ? 'active' : ''}}" wx:for="{{widgetDatas}}" wx:for-item="item" wx:for-index="itemIndex" data-index="{{itemIndex}}" bindscrolltolower="scrolltolower" bindscrolltolower="scrolltolower">
+      <view class="masonry">
+        <view class="item-wrapper" wx:for="{{item.list}}" wx:for-item="widget">
+          <navigator url="../widget_detail/widget_detail?dbid={{widget.dbid}}&type={{itemIndex}}">
+            <image class="img" mode="scaleToFill" src="{{widget.image}}"></image>
+            <view class="info">
+              <text class="name">{{widget.name}}</text>
+              <text class="desc">{{widget.desc}}</text>
+              <text class="time">•  {{widget.timeUpdateStr}}</text>
+            </view>
+          </navigator>
+        </view>
+      </view>
+      <view class="more-msg">{{widgetDataMsgs[itemIndex].moreMsg}}</view>
+    </scroll-view>
+  </view>
+  
+</view>

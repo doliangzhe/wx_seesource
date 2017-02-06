@@ -1,0 +1,28 @@
+<view class="container">
+  
+  <scroll-view scroll-y="{{true}}" class="scroll-view" bindscrolltolower="scrolltolower">
+     <!--轮播图-->
+     <swiper class="swiper" indicator-dots="{{true}}"
+       autoplay="{{true}}" interval="{{5000}}" duration="{{1000}}">
+       <swiper-item wx:for="{{swiperInfo}}" wx:for-item="item">
+         <navigator  class="slide-nav" url="../news_detail/news_detail?dbid={{item.newsDbid}}">
+         <image src="{{item.image}}" class="slide-image" mode="scaleToFill"/>
+         </navigator>
+       </swiper-item>
+     </swiper>
+     <view class="scroll-inner-view">
+       <navigator url="../news_detail/news_detail?dbid={{item.dbid}}" class="news-wrapper" wx:for="{{newsData.list}}" wx:for-item="item">
+         <image class="img" mode="scaleToFill" src="{{item.image}}"></image>
+         <view class="info-wrapper">
+            <text class="title">{{item.title}}</text>
+            <view class="bottom">
+              <text class="total-comment">{{item.total_comment}} 条评论</text>
+              <text class="time">{{item.timeCreateStr}}</text>
+            </view>
+            
+         </view>
+        </navigator>
+      </view>
+      <view hidden="{{newsData.list.length == 0 ? true : false}}" class="more-msg">{{newsDataMsg.moreMsg}}</view>
+  </scroll-view>
+</view>

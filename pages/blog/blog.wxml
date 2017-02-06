@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="container">
+  <!--tabs-wrapper-->
+  <view class="tabs-wrapper">
+    <view class="tab {{item.selected ? 'active' : ''}}" wx:for="{{articleDatas}}" wx:for-index="index" wx:for-item="item" bindtap="switchTab" data-index="{{index}}">{{item.name}}</view>
+  </view>
+  <!--content-wrapper-->
+  <view class="content-wrapper">
+    <scroll-view scroll-y="{{true}}" class="scroll-view {{item.selected ? 'active' : ''}}" wx:for="{{articleDatas}}" wx:for-item="item"  data-index="{{index}}" bindscrolltolower="scrolltolower">
+      <view class="scroll-inner-view">
+        <navigator url="../blog_detail/blog_detail?dbid={{article.dbid}}" class="article-wrapper" wx:for="{{item.list}}" wx:for-item="article">
+          <text class="title">{{article.title}}</text>
+          <view class="bottom">
+            <text class="total-click">{{article.total_click}} 人浏览</text>
+            <text class="separate">•</text>
+            <text class="time">{{article.timeCreateStr}}</text>
+          </view>
+        </navigator>
+      </view>
+      <view class="more-msg">{{articleDataMsgs[index].moreMsg}}</view>
+    </scroll-view>
+  </view>
+</view>

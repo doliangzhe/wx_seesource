@@ -1,0 +1,113 @@
+@import "/utils/wxParse/wxParse.wxss";
+
+page{
+  height: 100%;
+}
+.container {
+  padding: 0;
+  justify-content: flex-start;
+  background-color: #f7f7f7;
+}
+
+.scroll-view{
+  height: 100%;
+}
+
+.info-wrapper{
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx 20rpx 20rpx 20rpx;
+  background-color: #FFF;
+}
+.info-wrapper .title{
+  font-size: 32rpx;
+}
+.info-wrapper .other-wrapper{
+  display: flex;
+  align-items: center;
+  margin:20rpx 0 0 0;
+}
+.info-wrapper .other-wrapper .avatar{
+  width: 50rpx;
+  height:50rpx;
+  border-radius: 50%;
+}
+.info-wrapper .other-wrapper .nickName{
+  font-size: 24rpx;
+  color: #999999;
+  margin: 0 0 0 10rpx;
+}
+.info-wrapper .other-wrapper .time{
+  font-size: 24rpx;
+  color: #999999;
+  flex: 1;
+  text-align: right;
+}
+
+.content-wrapper{
+  margin: 20rpx 0 0 0;
+  padding: 20rpx 20rpx 20rpx 20rpx;
+  background-color: #FFF;
+}
+
+.comment-wrapper{
+  display: flex;
+  flex-direction: column;
+  margin: 20rpx 0 0 0;
+  background-color: #FFF;
+}
+.comment-wrapper .title-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 70rpx;
+  margin: 0 0 10rpx 20rpx;
+}
+.comment-wrapper .title-wrapper .title{
+   color: #353535;
+   font-size: 30rpx;
+}
+.comment-wrapper .title-wrapper .underline{
+   width: 50rpx;
+   height: 5rpx;
+   margin: 5rpx 0 0 0;
+   background-color: #353535;
+}
+.comment-wrapper .item-wrapper{
+  display: flex;
+  flex-direction: column;
+  margin: 20rpx 20rpx 0 20px;
+  padding: 0 0 20rpx 0;
+  border-bottom:3rpx solid #E5E5E5;
+}
+.comment-wrapper .item-wrapper .info{
+  display: flex;
+  align-items: center;
+}
+.comment-wrapper .item-wrapper .info .nickname{
+  font-size: 28rpx;
+  color: #999999;
+}
+.comment-wrapper .item-wrapper .info .separate{
+  font-size: 28rpx;
+  color: #999999;
+  margin: 0 20rpx 0 20rpx;
+}
+.comment-wrapper .item-wrapper .info .time{
+  font-size: 28rpx;
+  color: #999999;
+}
+.comment-wrapper .item-wrapper .content{
+  margin: 20rpx 0 0 0;
+  font-size: 28rpx;
+  line-height: 38rpx;
+  color: #333333;
+}
+
+.no-comment{
+  width: 100%;
+  text-align: center;
+  font-size: 28rpx;
+  color: #888888;
+  margin: 0 0 20rpx 0;
+}

@@ -1,0 +1,19 @@
+page{
+  height: 100%;
+}
+.container {
+  padding: 0;
+  justify-content: flex-start;
+  background-color: #F2F2F2;
+}
+.content-wrapper{
+  margin: 20rpx 0 0 0;
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+}
+.content-wrapper .content{
+  font-size: 30rpx;
+  padding: 20rpx;
+  line-height: 45rpx;
+}

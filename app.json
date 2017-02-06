@@ -1,0 +1,49 @@
+{
+  "pages":[
+    "pages/news/news",
+    "pages/blog/blog",
+    "pages/news_detail/news_detail",
+    "pages/blog_detail/blog_detail",
+    "pages/widget/widget",
+    "pages/widget_detail/widget_detail",
+    "pages/my/my",
+    "pages/about/about",
+    "pages/cooperation/cooperation"
+  ],
+  "window":{
+    "backgroundTextStyle":"#353535",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTitleText": "看源社区",
+    "navigationBarTextStyle":"#000000"
+  },
+  "tabBar": {
+    "color": "#b2b2b2",
+    "selectedColor": "#333333",
+    "borderStyle": "black",
+    "backgroundColor": "#FFFFFF",
+    "list": [{
+      "pagePath": "pages/news/news",
+      "text": "资讯",
+      "iconPath": "resource/image/news_icon.png",
+      "selectedIconPath": "resource/image/news_selected_icon.png"
+    },
+    {
+      "pagePath": "pages/blog/blog",
+      "text": "博客",
+      "iconPath": "resource/image/blog_icon.png",
+      "selectedIconPath": "resource/image/blog_selected_icon.png"
+    },
+    {
+      "pagePath": "pages/widget/widget",
+      "text": "组件",
+      "iconPath": "resource/image/widget_icon.png",
+      "selectedIconPath": "resource/image/widget_selected_icon.png"
+    },
+    {
+      "pagePath": "pages/my/my",
+      "text": "我的",
+      "iconPath": "resource/image/my_icon.png",
+      "selectedIconPath": "resource/image/my_selected_icon.png"
+    }]
+  }
+}

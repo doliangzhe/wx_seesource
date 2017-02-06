@@ -1,0 +1,34 @@
+<import src="../../utils/wxParse/wxParse.wxml"/>
+<view class="container">
+  <scroll-view scroll-y="{{true}}" class="scroll-view" hidden="{{loaded ? false : true}}">
+    <!--info-wrapper-->
+    <view class="info-wrapper">
+      <text class="title">{{articleDetail.title}}</text>
+      <view class="other-wrapper">
+        <image class="avatar" mode="scaleToFill" src="{{articleDetail.user.photo}}"></image>
+        <text class="nickName">{{articleDetail.user.nickName}}</text>
+        <text class="time">{{articleDetail.timeCreateStr}}</text>
+      </view>
+    </view>
+    <!--content-wrapper-->
+    <view class="content-wrapper">
+      <template is="wxParse" data="{{wxParseData:articleDetail.content.nodes}}"/>
+    </view>
+    <!--comment-wrapper-->
+    <view class="comment-wrapper">
+       <view class="title-wrapper">
+          <view class="title">所有评论</view>
+          <view class="underline"></view>
+       </view>
+       <view class="item-wrapper" wx:for="{{comments}}" wx:for-item="item">
+          <view class="info">
+            <text class="nickname">{{item.userNickname}}</text>
+            <text class="separate">•</text>
+            <text class="time">{{item.timeCreateStr}}</text>
+          </view>
+          <text class="content">{{item.content}}</text>
+       </view>
+       <text class="no-comment"  hidden="{{loaded && comments.length==0 ? false : true}}">暂时没有评论!</text>
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,10 @@
+<view class="container">
+  <view class="content-wrapper">
+    <text class="content">
+      看源社区创立于2014年8月，是一个专注于移动开发领域的技术分享社区。我们致力于研究最前沿的移动开发技术、以及为开发者带来丰富精彩的技术干货。
+    </text>
+    <text class="content">
+      我们很年轻、也很弱小，但是我们在不断的成长中, 也希望这个过程中有你更多的陪伴和支持，为大家带来更多有价值的内容。
+    </text>
+  </view>
+</view>
